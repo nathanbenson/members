@@ -1,0 +1,2 @@
+include versioneer.py
+include members/_version.py
