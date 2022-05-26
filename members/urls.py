@@ -18,7 +18,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from members import settings
 from subscribers.views import (GetSubsByAccountId, GetSubById, GetSubByPhoneNumber, GetSubByClientMemberId,
-    CreateMember, GenerateRandomUserView, SubscriberBatchProcess)
+    CreateMember, SubscriberBatchProcess)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,8 +32,6 @@ urlpatterns = [
         name='get_member_by_client_id'),
     url(r'^api/create_member/', CreateMember.as_view(),
         name='create_member'),
-    url(r'^api/generate/', GenerateRandomUserView.as_view(),
-        name='generate'),
     url(r'^api/generate_sub_batch/', SubscriberBatchProcess.as_view(),
         name='generate'),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),

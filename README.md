@@ -61,3 +61,23 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver (Port of your choice)
 ```
+
+Curl commands to create a user.
+
+```
+
+curl --header "Content-Type: application/json" -d '{"first_name": "john", "last_name": "Doe", "phone_number":"93","client_member_id": "91", "provider_info": ["16"]}' http://localhost:8000/api/create_member/
+
+```
+
+api endpoints:
+```
+http://localhost:8000/api/get_members_by_acc_id/12/
+http://localhost:8000/api/get_member_by_phone/6670161365/
+http://localhost:8000/api/get_member_by_id/1/
+http://localhost:8000/api/get_member_by_client_id/3865044/
+http://localhost:8000/api/generate_sub_batch/   Upload a csv and hit upload.
+
+local admin
+http://localhost:8000/admin/
+```
