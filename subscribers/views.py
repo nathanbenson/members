@@ -140,15 +140,6 @@ class SubscriberBatchProcess(APIView):
         return render(request, '{}/subscribers/templates/subscriber_upload.html'.format(settings.BASE_DIR))
 
 
-class GenerateRandomUserView(APIView):
-
-    parser_classes = (JSONRenderer,)
-
-    def post(self, request):
-        total = 20
-        return Response("It worked.", status.HTTP_201_CREATED)
-
-
 def create_member(first_name, last_name, phone_number, client_member_id, provider_info):
     """Create a given member."""
     sub = None
