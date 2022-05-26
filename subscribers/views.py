@@ -132,12 +132,12 @@ class SubscriberBatchProcess(APIView):
         for row in file_content:
             members.append(row)
         create_subscriber_patch.delay(members)
-        return render(request, '/home/usrznd/PycharmProjects/members/subscribers/templates/subscriber_upload.html', {
+        return render(request, '{}/subscribers/templates/subscriber_upload.html'.format(settings.BASE_DIR), {
             'upload_file': True
         })
 
     def get(self, request):
-        return render(request, '/home/usrznd/PycharmProjects/members/subscribers/templates/subscriber_upload.html')
+        return render(request, '{}/subscribers/templates/subscriber_upload.html'.format(settings.BASE_DIR))
 
 
 class GenerateRandomUserView(APIView):
