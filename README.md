@@ -19,7 +19,7 @@ available in your workstation, it needs to installed before setting up the virtu
 to set up virtualenv and virtualenv-wrapper, go to the following page.
 
 ```
-https://virtualenv.pypa.io/en/stable/installation/
+https://docs.python.org/3/library/venv.html
 http://virtualenvwrapper.readthedocs.io/en/latest/
 ```
 
