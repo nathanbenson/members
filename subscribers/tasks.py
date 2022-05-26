@@ -51,8 +51,6 @@ def create_patch(sub_list):
                 except IntegrityError as e:  # noqa Not expecting this to ever hit.
                     log.info("phone number or client member id already exists.")
 
-                except IntegrityError as e:
-                    log.info("phone_number or client_member_id already exists on a different member.")
         except Exception as e:  # noqa
             log.info("found exception {}".format(str(e)))
             pass

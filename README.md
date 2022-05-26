@@ -10,11 +10,11 @@ Local Deployment for Development
 Checkout the codebase from our Git repository server.
 
 ```
-git repository
+git clone git@github.com:nathanbenson/members.git
 ```
 
-A Python virtual environment needs to be created to isolate your Bss Adapter package from the system Python
-interpreter. Bss Adapter is a Django based python3.6 application. If python version 3.6 is not
+A Python virtual environment needs to be created to isolate your member application.
+membes is a Django based python3.6 application. If python version 3.6 is not
 available in your workstation, it needs to installed before setting up the virtual environment. For instructions on how
 to set up virtualenv and virtualenv-wrapper, go to the following page.
 
